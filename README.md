@@ -11,31 +11,11 @@ Site statique (HTML/CSS/JS, sans dépendance de build) pour la pizzeria **Jacomi
 - `assets/img/` — logo, favicon, photo d'accueil, textures (générés à partir des visuels de l'ancien site)
 - `robots.txt`, `sitemap.xml`, `.nojekyll` — référencement et config GitHub Pages
 
-## 1. Avant publication : mettre à jour l'URL du site
+## 1. Publier sur GitHub Pages
 
-Les balises SEO (canonical, Open Graph, sitemap, `robots.txt`, JSON-LD) utilisent un domaine temporaire `https://VOTRE-PSEUDO.github.io/jacomino-pizza/`. Une fois que vous connaissez l'URL définitive (GitHub Pages ou nom de domaine personnalisé), remplacez-la partout avec :
+Le dépôt est déjà initialisé, les URLs SEO pointent vers `https://enzopitre.github.io/jacomino-pizza/`, et le code a été poussé sur `https://github.com/EnzoPitre/jacomino-pizza`.
 
-```bash
-# Depuis le dossier du projet
-grep -rl "VOTRE-PSEUDO.github.io/jacomino-pizza" . --include="*.html" --include="*.xml" --include="*.txt" \
-  | xargs sed -i '' 's#https://VOTRE-PSEUDO.github.io/jacomino-pizza#https://VOTRE-URL-FINALE#g'
-```
-
-(Sur Linux, retirez le `''` après `-i`.)
-
-## 2. Publier sur GitHub Pages
-
-```bash
-cd "jacomino pizaa"
-git init
-git add .
-git commit -m "Nouveau site Jacomino Pizza"
-git branch -M main
-git remote add origin https://github.com/VOTRE-PSEUDO/jacomino-pizza.git
-git push -u origin main
-```
-
-Puis sur GitHub : **Settings → Pages → Build and deployment → Source : "Deploy from a branch"**, branche `main`, dossier `/ (root)`. Le site sera disponible à `https://VOTRE-PSEUDO.github.io/jacomino-pizza/` après 1–2 minutes.
+Il reste à activer Pages côté GitHub : **Settings → Pages → Build and deployment → Source : "Deploy from a branch"**, branche `main`, dossier `/ (root)`. Le site sera disponible à `https://enzopitre.github.io/jacomino-pizza/` après 1–2 minutes.
 
 ### Nom de domaine personnalisé (optionnel)
 

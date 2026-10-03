@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://VOTRE-PSEUDO.github.io/jacomino-pizza/sitemap.xml
+Sitemap: https://EnzoPitre.github.io/jacomino-pizza/sitemap.xml
